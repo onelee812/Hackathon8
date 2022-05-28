@@ -13,7 +13,6 @@ def signup(request):
                 'error_msg': error_msg,
                 'username': username
             })
-
         if len(found_user):
             error = "이미 아이디가 존재합니다"
             return render(request, "registration/signup.html", {"error": error})

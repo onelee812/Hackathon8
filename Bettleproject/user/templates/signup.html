@@ -14,13 +14,20 @@
         {% csrf_token %} {% if error_msg %}
         <p style="color: red">{{ error_msg}}</p>
         {% endif %}
+        <br />
         <input
           type="text"
           name="username"
           placeholder="아이디"
-          value="{{ username }}"
+          value="{{username}}"
         />
+        <br />
+        <input type="text" name="username" placeholder="소환사명" />
+        <br />
         <input type="password" name="password" placeholder="비밀번호" />
+        <br />
+        <input type="password" name="password" placeholder="비밀번호 확인" />
+        <br />
         <button>회원가입하기</button>
       </form>
     </section>
