@@ -53,3 +53,6 @@ def logout(request):
     auth.logout(request)
 
     return redirect("home")
+
+
+def validation(request):

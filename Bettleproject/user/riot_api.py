@@ -3,7 +3,6 @@ from urllib import parse
 
 
 DEVELOPMENTAPIKEY = "RGAPI-7a114fe7-dd1d-425b-b9d4-53445b3cac1a"
-summonerName = "ㅂㄷㄱ"
 # summonerName = "Hide on Bush"
 
 
