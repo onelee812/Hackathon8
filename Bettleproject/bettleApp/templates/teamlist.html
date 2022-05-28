@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'teamlist.css' %}">
+{% endblock css %}
+{% block title %}
+<h1>매칭 대기 리스트</h1>
+{% endblock title %}
+
+{% block content %}
+
+<div class="matching_box">
+    {% if not teams %}
+    <p>대기중인 팀이 없습니다.</p>
+    {% endif %}
+    {% for team in teams %}
+        <div class = "team_wrapper">
+            <div class = "team_hostuser">
+                [{{team.hostUser}}] 
+                </div>
+            <div class = "team_content">
+                <p>{{team.bulletBet}}</p>&nbsp;&nbsp;<p>{{team.Tier}}</p>
+            </div>
+            <div class = "match_date">
+                
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}
