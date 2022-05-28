@@ -14,15 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from bettleApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home', views.home, name="home"),
-    path('signup', views.signup, name="signup"),
-    path('logout', view.logout name="logout"),
-    path('teamadd', views.teamadd, name="teamadd"),
-    path('teamlist', views.teamlist, name="teamlist"),
-    path('notice', views.notice, name="notice"),
+    path('user/', include('user.urls')),
 ]
